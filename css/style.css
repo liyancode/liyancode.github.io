@@ -25,7 +25,7 @@ html {
 }
 a,a:hover{text-decoration:none}
 body {
-    background: #fff;
+    background: #efeee4;
 }
 article,
 aside,
@@ -465,14 +465,14 @@ img.aligncenter {
 .entry-content img,
 .comment-content img,
 .widget img {
-    max-width: 100%; /* Fluid images for posts, comments, and widgets */
+    max-width: 100%; /* Fluid image for posts, comments, and widgets */
 }
 .site-header img,
 .entry-content img,
 .widget img,
 img[class*="align"],
 img[class*="wp-image-"] {
-    height: auto; /* Make sure images with WordPress-added height and width attributes are scaled correctly */
+    height: auto; /* Make sure image with WordPress-added height and width attributes are scaled correctly */
 }
 .site-header img,
 .entry-content img,
@@ -801,6 +801,7 @@ h6 {
     margin:  0 auto 60px;
     padding: 0 40px;
     width: 750px;
+    box-shadow: 0 0 30px rgba(50,50,50,.1);
 }
 
 .site-header {

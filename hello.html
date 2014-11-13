@@ -4,65 +4,22 @@ layout: default
 <div id="main" class="site-main">
     <div id="primary" class="content-area">
         <div id="content" class="site-content" role="main">
-            <article class="post type-post status-publish format-standard hentry category-235 tag-reading">
-                <header class="entry-header">
-                    <h1 class="entry-title">
-                        <a href="#" rel="bookmark">这是一篇文章的标题</a>
-                    </h1>
-                </header>
-                <div class="entry-content">
-                    <p>这是文章的内容,这是文章的内容,这是文章的内容,这是文章的内容,这是文章的内容,这是文章的内容,这是文章的内容,这是文章的内容,这是文章的内容,这是文章的内容,这是文章的内容,这是文章的内容,这是文章的内容,这是文章的内容,这是文章的内容,这是文章的内容,这是文章的内容,这是文章的内容,这是文章的内容,这是文章的内容,这是文章的内容,</p>
-                </div>
-                <footer class="entry-meta">
-                    发表于
-                    <time class="entry-date">2014-11-11</time>
-                </footer>
-            </article>
-            <article class="post type-post status-publish format-standard hentry category-235 tag-reading">
-                <header class="entry-header">
-                    <h1 class="entry-title">
-                        <a href="#" rel="bookmark">这是一篇文章的标题</a>
-                    </h1>
-                </header>
-                <div class="entry-content">
-                    <p>这是文章的内容,这是文章的内容,这是文章的内容,这是文章的内容,这是文章的内容,这是文章的内容,这是文章的内容,这是文章的内容,这是文章的内容,这是文章的内容,这是文章的内容,这是文章的内容,这是文章的内容,这是文章的内容,这是文章的内容,这是文章的内容,这是文章的内容,这是文章的内容,这是文章的内容,这是文章的内容,这是文章的内容,</p>
-                    <p>这是文章的内容,这是文章的内容,这是文章的内容,这是文章的内容,这是文章的内容,这是文章的内容,这是文章的内容,这是文章的内容,这是文章的内容,这是文章的内容,这是文章的内容,这是文章的内容,这是文章的内容,这是文章的内容,这是文章的内容,这是文章的内容,这是文章的内容,这是文章的内容,这是文章的内容,这是文章的内容,这是文章的内容,</p>
-                </div>
-                <footer class="entry-meta">
-                    发表于
-                    <time class="entry-date">2014-11-11</time>
-                </footer>
-            </article>
-            <article class="post type-post status-publish format-standard hentry category-235 tag-reading">
-                <header class="entry-header">
-                    <h1 class="entry-title">
-                        <a href="#" rel="bookmark">这是一篇文章的标题</a>
-                    </h1>
-                </header>
-                <div class="entry-content">
-                    <p>这是文章的内容,这是文章的内容,这是文章的内容,这是文章的内容,这是文章的内容,这是文章的内容,这是文章的内容,这是文章的内容,这是文章的内容,这是文章的内容,这是文章的内容,这是文章的内容,这是文章的内容,这是文章的内容,这是文章的内容,这是文章的内容,这是文章的内容,这是文章的内容,这是文章的内容,这是文章的内容,这是文章的内容,</p>
-                    <p>这是文章的内容,这是文章的内容,这是文章的内容,这是文章的内容,这是文章的内容,这是文章的内容,这是文章的内容,这是文章的内容,这是文章的内容,这是文章的内容,这是文章的内容,这是文章的内容,这是文章的内容,这是文章的内容,这是文章的内容,这是文章的内容,这是文章的内容,这是文章的内容,这是文章的内容,这是文章的内容,这是文章的内容,</p>
-                </div>
-                <footer class="entry-meta">
-                    发表于
-                    <time class="entry-date">2014-11-11</time>
-                </footer>
-            </article>
-            <article class="post type-post status-publish format-standard hentry category-235 tag-reading">
-                <header class="entry-header">
-                    <h1 class="entry-title">
-                        <a href="#" rel="bookmark">这是一篇文章的标题</a>
-                    </h1>
-                </header>
-                <div class="entry-content">
-                    <p>这是文章的内容,这是文章的内容,这是文章的内容,这是文章的内容,这是文章的内容,这是文章的内容,这是文章的内容,这是文章的内容,这是文章的内容,这是文章的内容,这是文章的内容,这是文章的内容,这是文章的内容,这是文章的内容,这是文章的内容,这是文章的内容,这是文章的内容,这是文章的内容,这是文章的内容,这是文章的内容,这是文章的内容,</p>
-                    <p>这是文章的内容,这是文章的内容,这是文章的内容,这是文章的内容,这是文章的内容,这是文章的内容,这是文章的内容,这是文章的内容,这是文章的内容,这是文章的内容,这是文章的内容,这是文章的内容,这是文章的内容,这是文章的内容,这是文章的内容,这是文章的内容,这是文章的内容,这是文章的内容,这是文章的内容,这是文章的内容,这是文章的内容,</p>
-                </div>
-                <footer class="entry-meta">
-                    发表于
-                    <time class="entry-date">2014-11-11</time>
-                </footer>
-            </article>
+            {% for post in site.posts %}
+                <article class="post type-post status-publish format-standard hentry category-235 tag-reading">
+                    <header class="entry-header">
+                        <h1 class="entry-title">
+                            <a href="{{ post.url | prepend: site.baseurl }}" rel="bookmark">{{ post.title }}</a>
+                        </h1>
+                    </header>
+                    <div class="entry-content">
+                        <p>{{ post.content }}</p>
+                    </div>
+                    <footer class="entry-meta">
+                        {{ post.author }} 发表于
+                        <time class="entry-date">{{ post.date | date: "%Y-%m-%d"}}</time>
+                    </footer>
+                </article>
+            {% endfor %}
         </div>
     </div>
     <div id="secondary" class="widget-area" role="complementary">
