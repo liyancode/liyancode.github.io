@@ -1,31 +1,18 @@
 ---
 layout: default
 ---
-<div id="main" class="site-main">
-    <div id="primary" class="content-area">
-        <div id="content" class="site-content" role="main">
-            {% for post in site.posts %}
-                <article class="post type-post status-publish format-standard hentry category-235 tag-reading">
-                    <header class="entry-header">
-                        <h1 class="entry-title">
-                            <a href="{{ post.url | prepend: site.baseurl }}" rel="bookmark">{{ post.title }}</a>
-                        </h1>
-                    </header>
-                    <div class="entry-content">
-                        <p>{{ post.content }}</p>
-                    </div>
-                    <footer class="entry-meta">
-                        {{ post.author }} 发表于
-                        <time class="entry-date">{{ post.date | date: "%Y-%m-%d"}}</time>
-                    </footer>
-                    <hr style="border:2px double #e8e8e8"/>
-                </article>
-            {% endfor %}
-        </div>
-    </div>
-    <!--<div id="secondary" class="widget-area" role="complementary">-->
-        <!--<aside id="search-2" class="widget widget_search">-->
-            <!--<h1 class="widget-title">站内搜索：</h1>-->
-        <!--</aside>-->
-    <!--</div>-->
-</div>
+<section id="posts">
+    {% for post in site.posts %}
+    <article class="post">
+        <header>
+            <h2>
+                <a href="{{ post.url | prepend: site.baseurl }}" rel="bookmark">{{ post.title }}</a>
+            </h2>
+            <p>by {{ post.author }}
+                <time datetime="2014-11-25">{{ post.date | date: "%Y-%m-%d"}}</time>
+            </p>
+        </header>
+        <p>{{ post.content }}</p>
+    </article>
+    {% endfor %}
+</section>
