@@ -1,16 +1,37 @@
-<div id="container">
-    <header id="page_header">
-        <div id="page_title" class="span5">
-            <a href="#" title="李琰的博客">{:liyancode=>THIS}</a>
+<div class="wrapper">
+    <!--header start-->
+    <header class="header">
+        <div class="search">
+            <form accept-charset="UTF-8" action="/post/search" method="get">
+                <div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="✓"></div>
+                <input class="search-box" type="text" name="q" results="0" value="" placeholder="Search">
+            </form>
         </div>
-        <div class="span7" id="nav_tabs">
-            <nav>
-                <ul class="tabs">
-                    <li><a href="#">首页</a></li>
-                    <li><a href="#">归档</a></li>
-                    <li><a href="#">关于</a></li>
-                </ul>
-            </nav>
+        <div class="logo">
+            <h1><a href="#">DEMO Blog</a></h1>
+            <span class="tagline"> Hello world </span>
         </div>
+        <nav class="nav chrome-hack">
+            <ul class="inline-list">
+                <li>
+                    <a href="#" title="About Me">
+                        <i class="icon-file"></i>
+                        <span>About Me</span>
+                    </a>
+                </li>
+
+
+                <li>
+                    <a href="#">
+                        <i class="icon-archive"></i><span>Archive</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="icon-rss"></i><span>feeds</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
     </header>
-    <!--<section id="img_section"></section>-->
+    <!--header end-->
