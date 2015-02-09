@@ -3,139 +3,31 @@ layout: default
 ---
 <!--content start-->
 <div class="content">
+    {% for post in site.posts %}
     <div class="post container">
-
-        <div class="rel-date" data-timestamp="1388560320"> 大约 1 年 ago</div>
-
+        <div class="rel-date">{{post.date}}</div>
         <div class="title">
             <h2>
-                <a href="http://blog.logdown.com/posts/171593-using-rails-4-asset-pipeline-on-rails-3-for-faster-deploy">
-
-                    Using Rails 4 asset pipeline on Rails 3 for faster deploy
-
-
+                <a href="{{ post.url }}">
+                    {{post.title}}
                 </a>
             </h2>
         </div>
-
         <div class="article">
-
-
-            <p>We recently suffered from asset pipeline performance issues. In order to boost deploying, we decide
-                to switch to <a href="https://github.com/spagalloco/capistrano-local-precompile">capistrano-local-precompile</a>
-                strategy.</p>
-
-            <p>However, local asset compiling in Rails 4 is blazing fast, but in Rails 3 is not.</p>
-
-            <p>And much nightmare is if we can <a href="https://gist.github.com/xdite/3072362">skip compiling
-                prcoess if assets weren't changed when we compiling at remote</a>, but we need to compile asset
-                everytime if we choose to compile locally.</p>
-
-            <p>So we comes out this crazy idea: How about running Rails 4 asset pipeline in Rails 3 project.</p>
-
-            <p>Here is how:</p>
-            <h4>1. modify Gemfile</h4>
-            <figure class="figure-code code">
-                <figcaption><span>Gemfile
-</span></figcaption>
-                <div class="highlight"><pre><span class="n">group</span> <span class="ss">:assets</span> <span
-                        class="k">do</span>
-  <span class="n">gem</span> <span class="s1">'sprockets'</span><span class="p">,</span> <span class="s1">'2.2.2.backport2'</span>
-  <span class="n">gem</span> <span class="s1">'sprockets-rails'</span><span class="p">,</span> <span
-                            class="ss">:require</span> <span class="o">=&gt;</span> <span class="s1">'sprockets/railtie'</span><span
-                            class="p">,</span> <span class="ss">:git</span> <span class="o">=&gt;</span> <span
-                            class="s2">"git@github.com:logdown/sprockets-rails.git"</span>
-
-  <span class="n">gem</span> <span class="s1">'sass-rails'</span><span class="p">,</span>   <span class="s1">'~&gt; 4.0.1'</span><span
-                            class="p">,</span> <span class="ss">:git</span> <span class="o">=&gt;</span> <span
-                            class="s2">"git@github.com:logdown/sass-rails.git"</span>
-  <span class="n">gem</span> <span class="s2">"compass-rails"</span><span class="p">,</span> <span class="s2">"~&gt; 1.1.2"</span><span
-                            class="p">,</span> <span class="ss">:git</span> <span class="o">=&gt;</span> <span
-                            class="s2">"git@github.com:logdown/compass-rails.git"</span>
-
-  <span class="n">gem</span> <span class="s1">'coffee-rails'</span><span class="p">,</span> <span class="s1">'~&gt; 3.2.1'</span>
-
-  <span class="n">gem</span> <span class="s1">'uglifier'</span><span class="p">,</span> <span
-                            class="s1">'&gt;= 1.0.3'</span>
-<span class="k">end</span>
-</pre>
-                </div>
-            </figure>
-            <h4>2. edit config/enviorments/production.rb</h4>
-            <figure class="figure-code code">
-                <figcaption><span>config/enviorments/production.rb
-</span></figcaption>
-                <div class="highlight"><pre>  <span class="c1"># Disable Rails's static asset server (Apache or nginx will already do this)
-</span>
-  <span class="n">config</span><span class="p">.</span><span class="nf">serve_static_assets</span> <span
-                            class="o">=</span> <span class="kp">true</span>
-
-  <span class="c1"># Compress JavaScripts and CSS
-</span>
-  <span class="n">config</span><span class="p">.</span><span class="nf">assets</span><span class="p">.</span><span
-                            class="nf">compress</span> <span class="o">=</span> <span class="kp">true</span>
-
-
-  <span class="c1"># Generate digests for assets URLs
-</span>
-  <span class="n">config</span><span class="p">.</span><span class="nf">assets</span><span class="p">.</span><span
-                            class="nf">digest</span> <span class="o">=</span> <span class="kp">true</span>
-
-  <span class="n">config</span><span class="p">.</span><span class="nf">assets</span><span class="p">.</span><span
-                            class="nf">js_compressor</span> <span class="o">=</span> <span
-                            class="ss">:uglifier</span>
-  <span class="n">config</span><span class="p">.</span><span class="nf">assets</span><span class="p">.</span><span
-                            class="nf">css_compressor</span> <span class="o">=</span> <span class="ss">:sass</span>
-
-
-</pre>
-                </div>
-            </figure>
-            <h4>3. change config/deploy.rb</h4>
-
-            <p>You should install <code>capistrano-local-precompile</code> first, and override precompile command.
-                It's d because the precompile machism in different versions are different.</p>
-
-            <figure class="figure-code code">
-                <figcaption><span>config/deploy.rb
-</span></figcaption>
-                <div class="highlight"><pre><span class="n">set</span> <span class="ss">:precompile_cmd</span><span
-                        class="p">,</span> <span class="s2">"bundle exec rake RAILS_ENV=production RAILS_GROUPS=assets assets:precompile"</span>
-</pre>
-                </div>
-            </figure>
-            <h3>Behinde the scene</h3>
-
-            <p>Basically we are doing serveral things:</p>
-
-            <ol>
-                <li>make <code>sprockets-rails</code> edge running with <code>sprockets</code> 2.2</li>
-                <li>make <code>sass-rails</code> edge running under rails 3</li>
-                <li>make <code>compass-rails</code> edge running with rails 4 strategy</li>
-            </ol>
-            <p>to resolve asset_paths, SASS resolver issue...etc.</p>
-
-            <h3>Warning</h3>
-
-            <p>Before doing this, make sure you really understand what your are doing. And it exists many different
-                between sprockets 1 &amp; 2.</p>
-
-
+            {{ post.content}}
         </div>
-
-
         <div class="metadata">
             <ul class="inline-list">
                 <li>
-                    <i class="icon-time"></i> January 01, 2014 15:12
+                    <i class="icon-time"></i>{{post.date}}
                 </li>
                 <li>
                     <i class="icon-link"></i> <a
-                        href="http://blog.logdown.com/posts/171593-using-rails-4-asset-pipeline-on-rails-3-for-faster-deploy">
+                        href="#">
                     Permalink </a></li>
 
                 <li><i class="icon-comment"></i> <a
-                        href="http://blog.logdown.com/posts/171593-using-rails-4-asset-pipeline-on-rails-3-for-faster-deploy#disqus_thread">3
+                        href="#">3
                     Comments</a>
                 </li>
 
@@ -144,152 +36,151 @@ layout: default
         </div>
 
         <div style="clear: both;">&nbsp;</div>
-
-
-    </div>\
-    <div class="post container">
-
-        <div class="rel-date" data-timestamp="1388560320"> 大约 1 年 ago</div>
-
-        <div class="title">
-            <h2>
-                <a href="http://blog.logdown.com/posts/171593-using-rails-4-asset-pipeline-on-rails-3-for-faster-deploy">
-
-                    Using Rails 4 asset pipeline on Rails 3 for faster deploy
-
-
-                </a>
-            </h2>
-        </div>
-
-        <div class="article">
-
-
-            <p>We recently suffered from asset pipeline performance issues. In order to boost deploying, we decide
-                to switch to <a href="https://github.com/spagalloco/capistrano-local-precompile">capistrano-local-precompile</a>
-                strategy.</p>
-
-            <p>However, local asset compiling in Rails 4 is blazing fast, but in Rails 3 is not.</p>
-
-            <p>And much nightmare is if we can <a href="https://gist.github.com/xdite/3072362">skip compiling
-                prcoess if assets weren't changed when we compiling at remote</a>, but we need to compile asset
-                everytime if we choose to compile locally.</p>
-
-            <p>So we comes out this crazy idea: How about running Rails 4 asset pipeline in Rails 3 project.</p>
-
-            <p>Here is how:</p>
-            <h4>1. modify Gemfile</h4>
-            <figure class="figure-code code">
-                <figcaption><span>Gemfile
-</span></figcaption>
-                <div class="highlight"><pre><span class="n">group</span> <span class="ss">:assets</span> <span
-                        class="k">do</span>
-  <span class="n">gem</span> <span class="s1">'sprockets'</span><span class="p">,</span> <span class="s1">'2.2.2.backport2'</span>
-  <span class="n">gem</span> <span class="s1">'sprockets-rails'</span><span class="p">,</span> <span
-                            class="ss">:require</span> <span class="o">=&gt;</span> <span class="s1">'sprockets/railtie'</span><span
-                            class="p">,</span> <span class="ss">:git</span> <span class="o">=&gt;</span> <span
-                            class="s2">"git@github.com:logdown/sprockets-rails.git"</span>
-
-  <span class="n">gem</span> <span class="s1">'sass-rails'</span><span class="p">,</span>   <span class="s1">'~&gt; 4.0.1'</span><span
-                            class="p">,</span> <span class="ss">:git</span> <span class="o">=&gt;</span> <span
-                            class="s2">"git@github.com:logdown/sass-rails.git"</span>
-  <span class="n">gem</span> <span class="s2">"compass-rails"</span><span class="p">,</span> <span class="s2">"~&gt; 1.1.2"</span><span
-                            class="p">,</span> <span class="ss">:git</span> <span class="o">=&gt;</span> <span
-                            class="s2">"git@github.com:logdown/compass-rails.git"</span>
-
-  <span class="n">gem</span> <span class="s1">'coffee-rails'</span><span class="p">,</span> <span class="s1">'~&gt; 3.2.1'</span>
-
-  <span class="n">gem</span> <span class="s1">'uglifier'</span><span class="p">,</span> <span
-                            class="s1">'&gt;= 1.0.3'</span>
-<span class="k">end</span>
-</pre>
-                </div>
-            </figure>
-            <h4>2. edit config/enviorments/production.rb</h4>
-            <figure class="figure-code code">
-                <figcaption><span>config/enviorments/production.rb
-</span></figcaption>
-                <div class="highlight"><pre>  <span class="c1"># Disable Rails's static asset server (Apache or nginx will already do this)
-</span>
-  <span class="n">config</span><span class="p">.</span><span class="nf">serve_static_assets</span> <span
-                            class="o">=</span> <span class="kp">true</span>
-
-  <span class="c1"># Compress JavaScripts and CSS
-</span>
-  <span class="n">config</span><span class="p">.</span><span class="nf">assets</span><span class="p">.</span><span
-                            class="nf">compress</span> <span class="o">=</span> <span class="kp">true</span>
-
-
-  <span class="c1"># Generate digests for assets URLs
-</span>
-  <span class="n">config</span><span class="p">.</span><span class="nf">assets</span><span class="p">.</span><span
-                            class="nf">digest</span> <span class="o">=</span> <span class="kp">true</span>
-
-  <span class="n">config</span><span class="p">.</span><span class="nf">assets</span><span class="p">.</span><span
-                            class="nf">js_compressor</span> <span class="o">=</span> <span
-                            class="ss">:uglifier</span>
-  <span class="n">config</span><span class="p">.</span><span class="nf">assets</span><span class="p">.</span><span
-                            class="nf">css_compressor</span> <span class="o">=</span> <span class="ss">:sass</span>
-
-
-</pre>
-                </div>
-            </figure>
-            <h4>3. change config/deploy.rb</h4>
-
-            <p>You should install <code>capistrano-local-precompile</code> first, and override precompile command.
-                It's d because the precompile machism in different versions are different.</p>
-
-            <figure class="figure-code code">
-                <figcaption><span>config/deploy.rb
-</span></figcaption>
-                <div class="highlight"><pre><span class="n">set</span> <span class="ss">:precompile_cmd</span><span
-                        class="p">,</span> <span class="s2">"bundle exec rake RAILS_ENV=production RAILS_GROUPS=assets assets:precompile"</span>
-</pre>
-                </div>
-            </figure>
-            <h3>Behinde the scene</h3>
-
-            <p>Basically we are doing serveral things:</p>
-
-            <ol>
-                <li>make <code>sprockets-rails</code> edge running with <code>sprockets</code> 2.2</li>
-                <li>make <code>sass-rails</code> edge running under rails 3</li>
-                <li>make <code>compass-rails</code> edge running with rails 4 strategy</li>
-            </ol>
-            <p>to resolve asset_paths, SASS resolver issue...etc.</p>
-
-            <h3>Warning</h3>
-
-            <p>Before doing this, make sure you really understand what your are doing. And it exists many different
-                between sprockets 1 &amp; 2.</p>
-
-
-        </div>
-
-
-        <div class="metadata">
-            <ul class="inline-list">
-                <li>
-                    <i class="icon-time"></i> January 01, 2014 15:12
-                </li>
-                <li>
-                    <i class="icon-link"></i> <a
-                        href="http://blog.logdown.com/posts/171593-using-rails-4-asset-pipeline-on-rails-3-for-faster-deploy">
-                    Permalink </a></li>
-
-                <li><i class="icon-comment"></i> <a
-                        href="http://blog.logdown.com/posts/171593-using-rails-4-asset-pipeline-on-rails-3-for-faster-deploy#disqus_thread">3
-                    Comments</a>
-                </li>
-
-
-            </ul>
-        </div>
-
-        <div style="clear: both;">&nbsp;</div>
-
-
     </div>
+    {% endfor %}
+    <!--<div class="post container">-->
+
+    <!--<div class="rel-date" data-timestamp="1388560320"> 大约 1 年 ago</div>-->
+
+    <!--<div class="title">-->
+    <!--<h2>-->
+    <!--<a href="http://blog.logdown.com/posts/171593-using-rails-4-asset-pipeline-on-rails-3-for-faster-deploy">-->
+
+    <!--Using Rails 4 asset pipeline on Rails 3 for faster deploy-->
+
+
+    <!--</a>-->
+    <!--</h2>-->
+    <!--</div>-->
+
+    <!--<div class="article">-->
+
+
+    <!--<p>We recently suffered from asset pipeline performance issues. In order to boost deploying, we decide-->
+    <!--to switch to <a href="https://github.com/spagalloco/capistrano-local-precompile">capistrano-local-precompile</a>-->
+    <!--strategy.</p>-->
+
+    <!--<p>However, local asset compiling in Rails 4 is blazing fast, but in Rails 3 is not.</p>-->
+
+    <!--<p>And much nightmare is if we can <a href="https://gist.github.com/xdite/3072362">skip compiling-->
+    <!--prcoess if assets weren't changed when we compiling at remote</a>, but we need to compile asset-->
+    <!--everytime if we choose to compile locally.</p>-->
+
+    <!--<p>So we comes out this crazy idea: How about running Rails 4 asset pipeline in Rails 3 project.</p>-->
+
+    <!--<p>Here is how:</p>-->
+    <!--<h4>1. modify Gemfile</h4>-->
+    <!--<figure class="figure-code code">-->
+    <!--<figcaption><span>Gemfile-->
+    <!--</span></figcaption>-->
+    <!--<div class="highlight"><pre><span class="n">group</span> <span class="ss">:assets</span> <span-->
+    <!--class="k">do</span>-->
+    <!--<span class="n">gem</span> <span class="s1">'sprockets'</span><span class="p">,</span> <span class="s1">'2.2.2.backport2'</span>-->
+    <!--<span class="n">gem</span> <span class="s1">'sprockets-rails'</span><span class="p">,</span> <span-->
+    <!--class="ss">:require</span> <span class="o">=&gt;</span> <span class="s1">'sprockets/railtie'</span><span-->
+    <!--class="p">,</span> <span class="ss">:git</span> <span class="o">=&gt;</span> <span-->
+    <!--class="s2">"git@github.com:logdown/sprockets-rails.git"</span>-->
+
+    <!--<span class="n">gem</span> <span class="s1">'sass-rails'</span><span class="p">,</span>   <span class="s1">'~&gt; 4.0.1'</span><span-->
+    <!--class="p">,</span> <span class="ss">:git</span> <span class="o">=&gt;</span> <span-->
+    <!--class="s2">"git@github.com:logdown/sass-rails.git"</span>-->
+    <!--<span class="n">gem</span> <span class="s2">"compass-rails"</span><span class="p">,</span> <span class="s2">"~&gt; 1.1.2"</span><span-->
+    <!--class="p">,</span> <span class="ss">:git</span> <span class="o">=&gt;</span> <span-->
+    <!--class="s2">"git@github.com:logdown/compass-rails.git"</span>-->
+
+    <!--<span class="n">gem</span> <span class="s1">'coffee-rails'</span><span class="p">,</span> <span class="s1">'~&gt; 3.2.1'</span>-->
+
+    <!--<span class="n">gem</span> <span class="s1">'uglifier'</span><span class="p">,</span> <span-->
+    <!--class="s1">'&gt;= 1.0.3'</span>-->
+    <!--<span class="k">end</span>-->
+    <!--</pre>-->
+    <!--</div>-->
+    <!--</figure>-->
+    <!--<h4>2. edit config/enviorments/production.rb</h4>-->
+    <!--<figure class="figure-code code">-->
+    <!--<figcaption><span>config/enviorments/production.rb-->
+    <!--</span></figcaption>-->
+    <!--<div class="highlight"><pre>  <span class="c1"># Disable Rails's static asset server (Apache or nginx will already do this)-->
+    <!--</span>-->
+    <!--<span class="n">config</span><span class="p">.</span><span class="nf">serve_static_assets</span> <span-->
+    <!--class="o">=</span> <span class="kp">true</span>-->
+
+    <!--<span class="c1"># Compress JavaScripts and CSS-->
+    <!--</span>-->
+    <!--<span class="n">config</span><span class="p">.</span><span class="nf">assets</span><span class="p">.</span><span-->
+    <!--class="nf">compress</span> <span class="o">=</span> <span class="kp">true</span>-->
+
+
+    <!--<span class="c1"># Generate digests for assets URLs-->
+    <!--</span>-->
+    <!--<span class="n">config</span><span class="p">.</span><span class="nf">assets</span><span class="p">.</span><span-->
+    <!--class="nf">digest</span> <span class="o">=</span> <span class="kp">true</span>-->
+
+    <!--<span class="n">config</span><span class="p">.</span><span class="nf">assets</span><span class="p">.</span><span-->
+    <!--class="nf">js_compressor</span> <span class="o">=</span> <span-->
+    <!--class="ss">:uglifier</span>-->
+    <!--<span class="n">config</span><span class="p">.</span><span class="nf">assets</span><span class="p">.</span><span-->
+    <!--class="nf">css_compressor</span> <span class="o">=</span> <span class="ss">:sass</span>-->
+
+
+    <!--</pre>-->
+    <!--</div>-->
+    <!--</figure>-->
+    <!--<h4>3. change config/deploy.rb</h4>-->
+
+    <!--<p>You should install <code>capistrano-local-precompile</code> first, and override precompile command.-->
+    <!--It's d because the precompile machism in different versions are different.</p>-->
+
+    <!--<figure class="figure-code code">-->
+    <!--<figcaption><span>config/deploy.rb-->
+    <!--</span></figcaption>-->
+    <!--<div class="highlight"><pre><span class="n">set</span> <span class="ss">:precompile_cmd</span><span-->
+    <!--class="p">,</span> <span class="s2">"bundle exec rake RAILS_ENV=production RAILS_GROUPS=assets assets:precompile"</span>-->
+    <!--</pre>-->
+    <!--</div>-->
+    <!--</figure>-->
+    <!--<h3>Behinde the scene</h3>-->
+
+    <!--<p>Basically we are doing serveral things:</p>-->
+
+    <!--<ol>-->
+    <!--<li>make <code>sprockets-rails</code> edge running with <code>sprockets</code> 2.2</li>-->
+    <!--<li>make <code>sass-rails</code> edge running under rails 3</li>-->
+    <!--<li>make <code>compass-rails</code> edge running with rails 4 strategy</li>-->
+    <!--</ol>-->
+    <!--<p>to resolve asset_paths, SASS resolver issue...etc.</p>-->
+
+    <!--<h3>Warning</h3>-->
+
+    <!--<p>Before doing this, make sure you really understand what your are doing. And it exists many different-->
+    <!--between sprockets 1 &amp; 2.</p>-->
+
+
+    <!--</div>-->
+
+
+    <!--<div class="metadata">-->
+    <!--<ul class="inline-list">-->
+    <!--<li>-->
+    <!--<i class="icon-time"></i> January 01, 2014 15:12-->
+    <!--</li>-->
+    <!--<li>-->
+    <!--<i class="icon-link"></i> <a-->
+    <!--href="http://blog.logdown.com/posts/171593-using-rails-4-asset-pipeline-on-rails-3-for-faster-deploy">-->
+    <!--Permalink </a></li>-->
+
+    <!--<li><i class="icon-comment"></i> <a-->
+    <!--href="http://blog.logdown.com/posts/171593-using-rails-4-asset-pipeline-on-rails-3-for-faster-deploy#disqus_thread">3-->
+    <!--Comments</a>-->
+    <!--</li>-->
+
+
+    <!--</ul>-->
+    <!--</div>-->
+
+    <!--<div style="clear: both;">&nbsp;</div>-->
+
+
+    <!--</div>-->
 </div>
 <!--content end-->
