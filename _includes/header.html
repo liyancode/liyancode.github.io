@@ -1,37 +1,30 @@
-<div class="wrapper">
-    <!--header start-->
-    <header class="header">
-        <div class="search">
-            <form accept-charset="UTF-8" action="/post/search" method="get">
-                <div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="✓"></div>
-                <input class="search-box" type="text" name="q" results="0" value="" placeholder="Search">
-            </form>
-        </div>
-        <div class="logo">
-            <h1><a href="#">DEMO Blog</a></h1>
-            <span class="tagline"> Hello world </span>
-        </div>
-        <nav class="nav chrome-hack">
-            <ul class="inline-list">
-                <li>
-                    <a href="#" title="About Me">
-                        <i class="icon-file"></i>
-                        <span>About Me</span>
-                    </a>
-                </li>
-
-
-                <li>
-                    <a href="#">
-                        <i class="icon-archive"></i><span>Archive</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <i class="icon-rss"></i><span>feeds</span>
-                    </a>
-                </li>
-            </ul>
-        </nav>
-    </header>
-    <!--header end-->
+<div class="blog-header">
+  <div class="container">
+    <h1 class="blog-title"></h1>
+    <p class="lead blog-description">The fountain height does not higher than its source, one's career is also so, her achievements will never be more than their ideal.----Abraham Lincoln</p>
+  </div>
+</div>
+<div class="blog-masthead">
+  <div class="container clearfix">
+    <ul class="header-nav left" role="navigation">
+      <li class="header-nav-item">
+          <i class="icon-th-large"></i>
+        <a href="/" class="header-nav-link">
+          Home
+        </a>
+      </li>
+      <li class="header-nav-item">
+          <i class="icon-coffee"></i>
+        <a href="{{ "/posts/" | prepend: site.baseurl }}" class="header-nav-link">
+        Posts
+        </a>
+      </li>
+      <li class="header-nav-item">
+          <i class="icon-lemon"></i>
+        <a href="{{ "/about/" | prepend: site.baseurl }}" class="header-nav-link">
+          About
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>

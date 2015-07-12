@@ -1,0 +1,21 @@
+---
+layout: page
+---
+<div class="blog-main">
+    <h2>All Posts</h2>
+    <ul class="posts-list">
+        {% for post in site.posts %}
+        <li>
+            <ul>
+                <li>
+                    <i class="icon-lightbulb"></i>
+                    {{ post.date | date: "%b %-d, %Y" }}
+                </li>
+                <li>
+                    <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+                </li>
+            </ul>
+        </li>
+        {% endfor %}
+    </ul>
+</div>
