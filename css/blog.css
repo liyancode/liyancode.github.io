@@ -3,7 +3,7 @@
  */
 
 body {
-    font: 13px/1.4 Helvetica, arial, nimbussansl, liberationsans, freesans, clean, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
+    font: 13px/1.4 "Trebuchet MS", Helvetica, sans-serif;
     color: #333;
     background-color: #fff;
 }
@@ -15,7 +15,7 @@ h4, .h4,
 h5, .h5,
 h6, .h6 {
     margin-top: 0;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    /*font-family: "Comic Sans MS", cursive, sans-serif;*/
     font-weight: normal;
     color: #333;
 }
@@ -116,19 +116,21 @@ ul, ol {
 
 .blog-header {
     height:240px;
-    background-image:url("../image/header-background.jpg");
+    background-image:url("../image/hbck-min.jpg");
     position: relative;
     padding-top: 70px;
 
 }
 .blog-title {
     /*margin-top: 30px;*/
-    margin-bottom: 0;
+    font-family: "Comic Sans MS",cursive,sans-serif;
+    margin-bottom: 20px;
     /*font-size: 20px;*/
     font-weight: normal;
     color:white;
 }
 .blog-description {
+    font-family: "Comic Sans MS",cursive,sans-serif;
     font-size: 18px;
     color: white;
 }
@@ -140,7 +142,7 @@ ul, ol {
 
 .blog-main {
     /*width: 685px;*/
-    font-family: "Helvetica Neue", Helvetica, Arial, freesans, sans-serif;
+    /*font-family: "Helvetica Neue", Helvetica, Arial, freesans, sans-serif;*/
 }
 .blog-post-body {
     font-size: 16px;
@@ -149,7 +151,7 @@ ul, ol {
 }
 .markdown-body {
     overflow: hidden;
-    font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif;
+    /*font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif;*/
     font-size: 16px;
     line-height: 1.6;
     word-wrap: break-word;
