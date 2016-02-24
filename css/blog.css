@@ -116,21 +116,21 @@ ul, ol {
 
 .blog-header {
     height:240px;
-    background-image:url("../image/hbck-min.jpg");
+    background-image:url("../image/perf.png");
     position: relative;
     padding-top: 70px;
 
 }
 .blog-title {
-    /*margin-top: 30px;*/
-    font-family: "Comic Sans MS",cursive,sans-serif;
-    margin-bottom: 20px;
+    margin-top: 40px;
+    /*font-family: HelveticaNeue-Medium,"Helvetica Neue Medium","Helvetica Neue",Helvetica,Arial,sans-serif;*/
+    /*margin-bottom: 10px;*/
     /*font-size: 20px;*/
     font-weight: normal;
-    color:white;
+    color: #ffffff;
 }
 .blog-description {
-    font-family: "Comic Sans MS",cursive,sans-serif;
+    /*font-family: HelveticaNeue-Medium,"Helvetica Neue Medium","Helvetica Neue",Helvetica,Arial,sans-serif;*/
     font-size: 18px;
     color: white;
 }
