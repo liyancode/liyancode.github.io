@@ -3,30 +3,45 @@ layout: default
 ---
 <div class="container">
     <div class="blog-main">
+        <ul class="index-items">
         {% for post in site.posts %}
-        <div class="blog-post">
-            <h2 class="blog-post-title"><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h2>
-            <ul class="blog-post-meta">
-                <li class="meta-item">
-                    <i class="icon-calendar"></i>
-                    {{ post.date | date: "%b %-d, %Y" }}
-                </li>
-
-                <li class="vcard fn meta-item">
-                    <i class="icon-user"></i>
-                    {% if post.author %} {{ post.author }}{% endif %}
-                </li>
-
-                <li class="meta-item">
-                    <i class="icon-folder-close"></i>
-                    <a href="#">{{ post.categories }}</a>
-                </li>
-            </ul>
-            <div class="blog-post-body markdown-body">
-                {{ post.content }}
-            </div>
-        </div><!-- /.blog-post -->
+            <li class="index-item">
+                <article>
+                    <a href="{{ post.url | prepend: site.baseurl }}">
+                        <h1 class="index-article-title">{{ post.title }}</h1>
+                        <div class="index-article-img">
+                            <div class="index-article-img-div" style="background-image:url('/image/logo.jpeg')"></div>
+                        </div>
+                        <section class="index-article-summary">
+                            <p class="string-size-control">{{ post.content }}</p>
+                        </section>
+                    </a>
+                </article>
+            </li>
         {% endfor %}
+            </ul>
+        <!--<div class="blog-post">-->
+        <!--<h2 class="blog-post-title"><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h2>-->
+        <!--<ul class="blog-post-meta">-->
+        <!--<li class="meta-item">-->
+        <!--<i class="icon-calendar"></i>-->
+        <!--{{ post.date | date: "%b %-d, %Y" }}-->
+        <!--</li>-->
+
+        <!--<li class="vcard fn meta-item">-->
+        <!--<i class="icon-user"></i>-->
+        <!--{% if post.author %} {{ post.author }}{% endif %}-->
+        <!--</li>-->
+
+        <!--<li class="meta-item">-->
+        <!--<i class="icon-folder-close"></i>-->
+        <!--<a href="#">{{ post.categories }}</a>-->
+        <!--</li>-->
+        <!--</ul>-->
+        <!--<div class="blog-post-body markdown-body">-->
+        <!--{{ post.content }}-->
+        <!--</div>-->
+        <!--</div>&lt;!&ndash; /.blog-post &ndash;&gt;-->
     <nav>
         <ul class="pager">
         <li><a href="#"><i class="icon-arrow-left"></i></a></li>

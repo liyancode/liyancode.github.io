@@ -3,9 +3,11 @@
  */
 
 body {
-    font: 400 16px/24px Roboto,sans-serif;
-    color: #212121;
-    background-color: #fff;
+    color: #333;
+    font-size: 16px;
+    line-height: 1;
+    font-weight: 400;
+    font-family: -apple-system,"Helvetica Neue",Arial,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif;
 
 }
 
@@ -20,8 +22,17 @@ h6, .h6 {
     font-weight: normal;
     color: #333;
 }
+a{
+    color: #4078c0;
+}
+a:hover{
+    text-decoration: none;
+}
 
-
+ul{
+    margin: 0;
+    padding: 0;
+}
 /*
  * Override Bootstrap's default container.
  */
@@ -40,12 +51,15 @@ h6, .h6 {
  */
 
 .blog-masthead {
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
     margin-bottom: 20px;
     /*min-width: 1000px;*/
-    background-color: #f5f5f5;
+    /*background-color: #f5f5f5;*/
     border-bottom: 1px solid #e5e5e5;
+    color: #fff;
+    background-color: #F5F5F5;
+    background-image: url("../image/bg.png");
 }
 .left {
     float: left;
@@ -56,15 +70,27 @@ h6, .h6 {
 .center{
     position: absolute;
     left: 50%;
-    margin-left: -9px;
+    margin-left: -73px;
 }
 .header-nav {
     list-style: none;
+    padding-top: 7px;
 }
 ul, ol {
     padding: 0;
     margin-top: 0;
     margin-bottom: 0;
+}
+.logo-image{
+    float: left;
+}
+
+.logo-image-img{
+    border: 1px solid white;
+    width: 38px;
+    height: 38px;
+    margin-right: 12px;
+    border-radius: 3px;
 }
 .header-nav-item {
     float: left;
@@ -73,9 +99,9 @@ ul, ol {
     /*display: block;*/
     /*padding: 4px 8px;*/
     padding-right: 10px;
-    font-size: 13px;
-    font-weight: bold;
-    line-height: 20px;
+    /*font-size: 13px;*/
+    /*font-weight: bold;*/
+    line-height: 24px;
     color: #333;
 }
 /* Nav links */
@@ -280,6 +306,42 @@ ul, ol {
 .about-me-content .my-description{
     width: 330px;
     padding-left: 10px;
+}
+
+.index-item{
+    list-style: none;
+    min-height: 180px;
+    padding-bottom: 0;
+}
+.index-item+.index-item {
+    margin-top: 56px;
+}
+.index-item article{
+    position: relative;
+    padding-bottom: 14px;
+}
+.index-article-title{
+    font-size: 20px;
+    line-height: 1.5;
+    font-weight: 700;
+    margin: 0;
+    overflow: hidden;
+    color: #333;
+    text-decoration: none;
+    max-height: 60px;
+    margin-left: 260px;
+}
+.index-article-img{
+    position: absolute;
+    width: 240px;
+     height: 180px;
+    top: 0;
+    text-decoration: none;
+    margin-left: 260px;
+}
+.index-article-summary p{
+    margin: 0;
+    word-break: break-all;
 }
 
 

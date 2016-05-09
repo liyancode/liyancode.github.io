@@ -1,22 +1,20 @@
----
-layout: post
-title:  "Java Performance: The Definitive Guide(2st)"
-date:   2016-02-25 09:16:58
-categories: performance java
-author: liyan
----
+---  
+layout: post  
+title:  "Java Performance: The Definitive Guide(2st)"  
+date:   2016-02-25 09:16:58  
+categories: performance java  
+author: liyan  
+---  
 
 ## 2 章 性能测试方法
-
 ### 4个性能测试的准则
-
-- #### 准侧1：测试真实的应用(实际生产环境)
-性能测试应该在真实的生产环境（或者与生产环境等价的条件）中发生。严格来说有三种粒度的性能测试，各有利弊。
-	* ##### microbenchmark(微基准测试)
-	微基准测试用来测试非常小的性能单元：
-		- 同步（synchronized）方法调用 VS 非同步（nonsynchronized）方法调用的时间比较；
-		- 新建线程对象和使用线程池的性能对比；
-		- 同一个问题两种实现算法的执行时间比较；等等
+#### _准侧1：测试真实的应用(实际生产环境)_
+性能测试应该在真实的生产环境（或者与生产环境等价的条件）中发生。严格来说有三种粒度的性能测试，各有利弊。  
+##### **microbenchmark(微基准测试)**
+微基准测试用来测试非常小的性能单元：  
+-同步（synchronized）方法调用 VS 非同步（nonsynchronized）方法调用的时间比较；  
+-新建线程对象和使用线程池的性能对比；  
+-同一个问题两种实现算法的执行时间比较；等等  
 
 		微基准测试想法很好，但是很难正确编写测试代码。
 		* 微基准测试必须使用被测试代码的返回结果，这样保证被测试代码被执行到，因为有些时候编译器会智能的优化代码

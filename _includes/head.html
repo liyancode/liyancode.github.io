@@ -5,6 +5,8 @@
   <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
   <meta name="description" content="">
   <meta name="author" content="">
+  <link rel="stylesheet" href="{{ '/css/dataurl.css' | prepend: site.baseurl }}">
+  <script src="{{ '/js/pace.min.js' | prepend: site.baseurl }}"></script>
   <link rel="icon" href="{{"/image/favicon.ico"| prepend: site.url }}" type="image/x-icon">
 
   <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
@@ -20,8 +22,7 @@
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
   <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" />
   <!-- progress bar-->
-  <link rel="stylesheet" href="{{ '/css/dataurl.css' | prepend: site.baseurl }}">
-  <script src="{{ '/js/pace.min.js' | prepend: site.baseurl }}"></script>
+
 
   <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
   <!--[if lt IE 9]>

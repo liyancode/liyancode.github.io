@@ -1,28 +1,55 @@
-<div class="blog-header">
-  <div class="container">
-    <h1 class="blog-title">High Performance Leading the World!</h1>
-    <!--<p class="lead blog-description">High performance leading the world!</p>-->
-  </div>
-</div>
+<!--<div class="blog-header">-->
+  <!--<div class="container">-->
+    <!--<h1 class="blog-title">High Performance Leading the World!</h1>-->
+    <!--&lt;!&ndash;<p class="lead blog-description">High performance leading the world!</p>&ndash;&gt;-->
+  <!--</div>-->
+<!--</div>-->
 <div class="blog-masthead">
   <div class="container clearfix">
-    <ul class="header-nav left" role="navigation">
+    <div class="logo-image">
+      <!-- ngIf: !title.imghref -->
+      <!-- ngIf: title.imghref -->
+      <a href="/" >
+        <img class="logo-image-img avatar avatar-small" alt="" src="/image/logo.jpeg">
+      </a><!-- end ngIf: title.imghref -->
+    </div>
+    <!--<ul class="header-nav left" role="navigation">-->
+      <!--&lt;!&ndash;<li class="header-nav-item">&ndash;&gt;-->
+          <!--&lt;!&ndash;<i class="icon-th-large"></i>&ndash;&gt;-->
+        <!--&lt;!&ndash;<a href="/" class="header-nav-link">&ndash;&gt;-->
+          <!--&lt;!&ndash;Home&ndash;&gt;-->
+        <!--&lt;!&ndash;</a>&ndash;&gt;-->
+      <!--&lt;!&ndash;</li>&ndash;&gt;-->
+      <!--<li class="header-nav-item">-->
+          <!--<i class="icon-folder-close-alt"></i>-->
+        <!--<a href="{{ "/posts/" | prepend: site.baseurl }}" class="header-nav-link">-->
+        <!--Posts-->
+        <!--</a>-->
+      <!--</li>-->
+      <!--<li class="header-nav-item">-->
+          <!--<i class="icon-lemon"></i>-->
+        <!--<a href="{{ "/about/" | prepend: site.baseurl }}" class="header-nav-link">-->
+          <!--About-->
+        <!--</a>-->
+      <!--</li>-->
+    <!--</ul>-->
+    <ul class="header-nav right" role="navigation">
       <li class="header-nav-item">
-          <i class="icon-th-large"></i>
-        <a href="/" class="header-nav-link">
-          Home
+        <a href="{{ "/posts/" | prepend: site.baseurl }}" class="header-nav-link" title="posts">
+          <i class="icon-folder-close-alt"></i>
         </a>
       </li>
       <li class="header-nav-item">
-          <i class="icon-coffee"></i>
-        <a href="{{ "/posts/" | prepend: site.baseurl }}" class="header-nav-link">
-        Posts
+        <a href="{{ "/about/" | prepend: site.baseurl }}" class="header-nav-link" title="about">
+         <i class="icon-circle-blank"></i>
         </a>
       </li>
       <li class="header-nav-item">
-          <i class="icon-lemon"></i>
-        <a href="{{ "/about/" | prepend: site.baseurl }}" class="header-nav-link">
-          About
+
+      </li>
+      <li class="header-nav-item">
+        <a href="https://github.com/liyancode" target="_blank" class="header-nav-link">
+          <i class="icon-github"></i>
         </a>
       </li>
     </ul>
