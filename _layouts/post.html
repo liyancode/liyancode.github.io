@@ -1,48 +1,10 @@
 ---
 layout: default
 ---
-<div class="container">
-  <div class="blog-main">
-    <div class="blog-post">
-      <h2 class="blog-post-title">{{ page.title }}</h2>
-      <ul class="blog-post-meta">
-        <li class="meta-item">
-            <i class="icon-calendar"></i>
-          {{ page.date | date: "%b %-d, %Y" }}
-        </li>
-
-        <li class="vcard fn meta-item">
-            <i class="icon-user"></i>
-          {% if page.author %} {{ page.author }}{% endif %}
-        </li>
-
-        <li class="meta-item">
-            <i class="icon-folder-close"></i>
-          <a href="#">{{ page.categories }}</a>
-        </li>
-      </ul>
-      <div class="blog-post-body markdown-body">
-        {{ content }}
-      </div>
-    </div><!-- /.blog-post -->
-    <!--<nav>-->
-      <!--<ul class="pager">-->
-        <!--<li><a href="http://v3.bootcss.com/examples/blog/#">Previous</a></li>-->
-        <!--<li><a href="http://v3.bootcss.com/examples/blog/#">Next</a></li>-->
-      <!--</ul>-->
-    <!--</nav>-->
-  </div>
-    <div id="disqus_thread"></div>
-    <script type="text/javascript">
-        /* * * CONFIGURATION VARIABLES * * */
-        var disqus_shortname = 'liyancodeblog';
-
-        /* * * DON'T EDIT BELOW THIS LINE * * */
-        (function() {
-            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-        })();
-    </script>
-    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+<div class="blog-post">
+    <h2 class="blog-post-title">
+        {{ page.title }}
+    </h2>
+    <p class="blog-post-meta">{{ page.date|date: "%b %-d, %Y" }} by <a href="#">{{ page.author }}</a></p>
+    {{ content }}
 </div>
