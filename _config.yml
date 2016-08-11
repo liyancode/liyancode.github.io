@@ -13,3 +13,5 @@ github_username:  liyancode
 markdown: kramdown
 kramdown:
   input: GFM
+
+#excerpt_separator: "<!--readmore-->"

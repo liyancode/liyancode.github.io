@@ -32,15 +32,20 @@ h6, .h6 {
 }
 
 a{
-    color: #D96459;
+    color: #212121;
+    color: rgba(0,0,0,.87);
+}
+a:focus, a:hover {
+    color: #4184F3;
+    text-decoration: none;
 }
 /*
  * Masthead for nav
  */
 
 .blog-masthead {
-    background-color: #588C73;
-    border-bottom: 1px solid #588C73;
+    background-color: white;
+    border-bottom: 1px solid #e5e5e5;
 }
 
 /* Nav links */
@@ -49,11 +54,13 @@ a{
     display: inline-block;
     padding: 10px;
     font-weight: 500;
-    color: #cdddeb;
+    color: #212121;
+    color: rgba(0,0,0,.87);
 }
 .blog-nav-item:hover,
 .blog-nav-item:focus {
-    color: #fff;
+    color: #212121;
+    color: rgba(0,0,0,.87);
     text-decoration: none;
 }
 
@@ -104,6 +111,10 @@ a{
     font-size: 18px;
     line-height: 1.5;
 }
+.blog-main a{
+    color: #4184F3;
+    /*color: rgba(0,0,0,.87);*/
+}
 
 /* Sidebar modules for boxing content */
 .sidebar-module {
@@ -140,34 +151,69 @@ a{
  */
 
 .blog-post {
-    margin-bottom: 60px;
+    margin-bottom: 36px;
+    color: #212121;
+    color: rgba(0,0,0,.87);
+    font-size: 15px;
+    line-height: 20px;
 }
 .blog-post img{
     width: 100%;
     padding: 5px;
 }
 .blog-post-title {
-    margin-bottom: 5px;
-    font-size: 40px;
+    color: #212121;
+    color: rgba(0,0,0,.87);
+    margin-bottom: 20px;
+    font-size: 24px;
+    line-height: 26px;
+}
+.blog-post-title>a{
+    color: #212121;
+    color: rgba(0,0,0,.87);
+}
+.blog-post-title>a:focus, a:hover{
+    color: #4184F3;
+    text-decoration: none;
 }
 .blog-post-meta {
-    margin-bottom: 20px;
+    margin-bottom: 8px;
     color: #999;
 }
 
+.blog-title-post-title{
+    margin-top: 24px;
+    margin-bottom: 0;
+    font-size: 48px;
+    font-weight: normal;
+}
 
 /*
  * Footer
  */
 
 .blog-footer {
-    background-image: url("../image/bg.png");
+    /*background-image: url("../image/bg.png");*/
     padding: 40px 0;
-    color: #FFF;
+    color: #212121;
+    color: rgba(0,0,0,.87);
     text-align: center;
-    background-color: #588C73;
+    /*background-color: #588C73;*/
     border-top: 1px solid #e5e5e5;
 }
 .blog-footer p:last-child {
     margin-bottom: 0;
+}
+
+.blog-post .post_excerpt_image_block{
+    width: 20%;
+    overflow: hidden;
+}
+.blog-post .post_excerpt_content_block{
+    width: 70%;
+    float: right;
+}
+
+.myrowhight{
+    height: 256px;
 }

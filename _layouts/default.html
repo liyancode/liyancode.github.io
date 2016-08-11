@@ -8,13 +8,17 @@
 
     <div class="container">
       <div class="blog-header">
-        <!--<h1 class="blog-title">The Bootstrap Blog</h1>-->
-        <!--<p class="lead blog-description">The official example template of creating a blog with Bootstrap.</p>-->
+        <h1 class="blog-title">The Bootstrap Blog</h1>
+        <p class="lead blog-description">The official example template of creating a blog with Bootstrap.</p>
       </div>
       <div class="row">
-        <div class="col-sm-8 blog-main">
+        <div class="col-sm-12 blog-main">
           {{ content }}
-          <div id="disqus_thread"></div>
+          <div class="container">
+            <div class="row">
+              <div id="disqus_thread" class="col-xs-12"></div>
+              </div>
+            </div>
           <script type="text/javascript">
             /* * * CONFIGURATION VARIABLES * * */
             var disqus_shortname = 'liyancodeblog';
@@ -28,37 +32,40 @@
           </script>
           <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
         </div>
-        <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
-          <div class="sidebar-module sidebar-module-inset">
-            <h4>About</h4>
-            <p>Etiam porta <em>sem malesuada magna</em> mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
-          </div>
-          <div class="sidebar-module">
-            <h4>Archives</h4>
-            <ol class="list-unstyled">
-              <li><a href="#">March 2014</a></li>
-              <li><a href="#">February 2014</a></li>
-              <li><a href="#">January 2014</a></li>
-              <li><a href="#">December 2013</a></li>
-              <li><a href="#">November 2013</a></li>
-              <li><a href="#">October 2013</a></li>
-              <li><a href="#">September 2013</a></li>
-              <li><a href="#">August 2013</a></li>
-              <li><a href="#">July 2013</a></li>
-              <li><a href="#">June 2013</a></li>
-              <li><a href="#">May 2013</a></li>
-              <li><a href="#">April 2013</a></li>
-            </ol>
-          </div>
-          <div class="sidebar-module">
-            <h4>Elsewhere</h4>
-            <ol class="list-unstyled">
-              <li><a href="#">GitHub</a></li>
-              <li><a href="#">Twitter</a></li>
-              <li><a href="#">Facebook</a></li>
-            </ol>
-          </div>
-        </div>
+        <!--<div class="col-sm-3 col-sm-offset-1 blog-sidebar">-->
+          <!--<div class="sidebar-module sidebar-module-inset">-->
+            <!--<h4>About</h4>-->
+            <!--<p>Etiam porta <em>sem malesuada magna</em> mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>-->
+          <!--</div>-->
+          <!--&lt;!&ndash;<div class="sidebar-module">&ndash;&gt;-->
+            <!--&lt;!&ndash;<h4>Archives</h4>&ndash;&gt;-->
+            <!--&lt;!&ndash;<ol class="list-unstyled">&ndash;&gt;-->
+              <!--&lt;!&ndash;{% for post in site.posts %}&ndash;&gt;-->
+                <!--&lt;!&ndash;<li><a href="#">{{ post.date|date: "%b %Y"}}</a></li>&ndash;&gt;-->
+              <!--&lt;!&ndash;{% endfor %}&ndash;&gt;-->
+              <!--&lt;!&ndash;&lt;!&ndash;<li><a href="#">March 2014</a></li>&ndash;&gt;&ndash;&gt;-->
+              <!--&lt;!&ndash;&lt;!&ndash;<li><a href="#">February 2014</a></li>&ndash;&gt;&ndash;&gt;-->
+              <!--&lt;!&ndash;&lt;!&ndash;<li><a href="#">January 2014</a></li>&ndash;&gt;&ndash;&gt;-->
+              <!--&lt;!&ndash;&lt;!&ndash;<li><a href="#">December 2013</a></li>&ndash;&gt;&ndash;&gt;-->
+              <!--&lt;!&ndash;&lt;!&ndash;<li><a href="#">November 2013</a></li>&ndash;&gt;&ndash;&gt;-->
+              <!--&lt;!&ndash;&lt;!&ndash;<li><a href="#">October 2013</a></li>&ndash;&gt;&ndash;&gt;-->
+              <!--&lt;!&ndash;&lt;!&ndash;<li><a href="#">September 2013</a></li>&ndash;&gt;&ndash;&gt;-->
+              <!--&lt;!&ndash;&lt;!&ndash;<li><a href="#">August 2013</a></li>&ndash;&gt;&ndash;&gt;-->
+              <!--&lt;!&ndash;&lt;!&ndash;<li><a href="#">July 2013</a></li>&ndash;&gt;&ndash;&gt;-->
+              <!--&lt;!&ndash;&lt;!&ndash;<li><a href="#">June 2013</a></li>&ndash;&gt;&ndash;&gt;-->
+              <!--&lt;!&ndash;&lt;!&ndash;<li><a href="#">May 2013</a></li>&ndash;&gt;&ndash;&gt;-->
+              <!--&lt;!&ndash;&lt;!&ndash;<li><a href="#">April 2013</a></li>&ndash;&gt;&ndash;&gt;-->
+            <!--&lt;!&ndash;</ol>&ndash;&gt;-->
+          <!--&lt;!&ndash;</div>&ndash;&gt;-->
+          <!--<div class="sidebar-module">-->
+            <!--<h4>Elsewhere</h4>-->
+            <!--<ol class="list-unstyled">-->
+              <!--<li><a href="#">GitHub</a></li>-->
+              <!--<li><a href="#">Twitter</a></li>-->
+              <!--<li><a href="#">Facebook</a></li>-->
+            <!--</ol>-->
+          <!--</div>-->
+        <!--</div>-->
       </div>
     </div>
 

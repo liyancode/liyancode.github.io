@@ -4,6 +4,7 @@ title:  "Ruby Bundler"
 date:   2016-04-21 09:16:58  
 categories: ruby
 author: liyan  
+image: image/larg.png  
 --- 
 
 # Ruby_Bundler（中文参考）[bundler.io](http://www.bundler.io)
