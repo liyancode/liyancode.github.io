@@ -3,7 +3,7 @@
  */
 
 html {
-    font-family: Roboto, sans-serif;
+    font-family: PingFang SC,Lantinghei SC,Helvetica Neue,Helvetica,Arial,Microsoft YaHei,\\5FAE\8F6F\96C5\9ED1,STHeitiSC-Light,simsun,\\5B8B\4F53,WenQuanYi Zen Hei,WenQuanYi Micro Hei,'sans-serif';
     /*-moz-osx-font-smoothing: grayscale;*/
     -webkit-font-smoothing: antialiased;
 }
@@ -15,7 +15,7 @@ h4, .h4,
 h5, .h5,
 h6, .h6 {
     margin-top: 0;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    /*font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;*/
     font-weight: normal;
     color: #333;
 }
@@ -90,6 +90,8 @@ a:focus, a:hover {
 .blog-header {
     padding-top: 20px;
     padding-bottom: 20px;
+    border-bottom: 1px #e5e5e5 solid !important;
+    margin-bottom: 24px;
 }
 .blog-title {
     margin-top: 30px;
@@ -182,10 +184,11 @@ a:focus, a:hover {
 }
 
 .blog-title-post-title{
-    margin-top: 24px;
+    margin-top: 20px;
     margin-bottom: 0;
-    font-size: 48px;
+    font-size: 20px;
     font-weight: normal;
+    line-height: 34px;
 }
 
 /*
