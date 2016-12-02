@@ -110,7 +110,7 @@ a:focus, a:hover {
  */
 
 .blog-main {
-    font-size: 18px;
+    font-size: 15px;
     line-height: 1.5;
 }
 .blog-main a{
@@ -157,7 +157,7 @@ a:focus, a:hover {
     color: #212121;
     color: rgba(0,0,0,.87);
     font-size: 15px;
-    line-height: 20px;
+    line-height: 1.5;
 }
 .blog-post img{
     width: 100%;
