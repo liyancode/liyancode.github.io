@@ -224,3 +224,12 @@ a:focus, a:hover {
 .myrowhight{
     height: 256px;
 }
+
+.li-chevon{
+    background: url(../image/li-chevron.png) 0 5px no-repeat;
+    padding: 5px 15px 5px 25px;
+    background-position: 15px 10px;
+}
+.posts-list{
+    padding-left: 0px;
+}
