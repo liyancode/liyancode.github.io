@@ -1,7 +1,7 @@
 ---  
 layout: post  
 title:  "Ruby Bundler"  
-date:   2016-04-21 09:16:58  
+date:   2014-07-21 09:16:58  
 categories: ruby
 author: liyan  
 image: image/larg.png  
