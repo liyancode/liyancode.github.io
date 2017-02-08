@@ -144,4 +144,4 @@ These are just some of the optimizations which were implemented and validated us
 - To iterate quickly on new ideas, we should validate and refine them in a synthetic performance testing environment. We have a synthetic performance testing framework where we can do many runs of a test in an isolated environment to validate and refine the idea before pushing out to production. This framework has been very useful for iterating quickly on new ideas.  
 
 
-（ 原文 [Measuring and Optimizing Performance of Single-Page Applications (SPA) Using RUM](https://engineering.linkedin.com/blog/2017/02/measuring-and-optimizing-performance-of-single-page-applications)）  
+([source link](https://engineering.linkedin.com/blog/2017/02/measuring-and-optimizing-performance-of-single-page-applications)）  
