@@ -9,14 +9,15 @@
 <div class="container">
     <div class="blog-header">
         <h1 class="blog-title-post-title ">{{ page.title }}</h1>
+        <p class="lead blog-description" style="font-size: 16px;text-align: right;">Last update {{ page.date|date: "%b %-d, %Y" }} by {{ page.author }}</p>
     </div>
     <div class="row">
         <div class="col-sm-12 col-md-12 blog-main">
-            <p class="lead blog-description">{{ page.date|date: "%b %-d, %Y" }}, {{ page.author }}</p>
+            <!--<p class="lead blog-description">Last update {{ page.date|date: "%b %-d, %Y" }}, {{ page.author }}</p>-->
             {{ content }}
-            <div class="container">
+            <div class="container-fluid">
                 <div class="row">
-                    <div id="disqus_thread" class="col-sm-12 col-md-8"></div>
+                    <div id="disqus_thread" class="col-sm-12 col-md-12"></div>
                 </div>
             </div>
             <script type="text/javascript">
