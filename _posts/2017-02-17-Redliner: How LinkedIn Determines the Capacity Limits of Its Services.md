@@ -1,7 +1,7 @@
 ---  
 layout: post  
 title:  "[R]Redliner: How LinkedIn Determines the Capacity Limits of Its Services"  
-date:   2017-02-02 09:16:58  
+date:   2017-02-17 22:16:58  
 categories: performance,capacity  
 author: internet  
 ---  
