@@ -1,9 +1,9 @@
 ---  
 layout: post  
-title:  "Best Practices for Designing a Pragmatic RESTful API"  
+title:  "[R]Best Practices for Designing a Pragmatic RESTful API"  
 date:   2015-12-10 01:16:58  
 categories: REST  
-author: liyan  
+author: internet  
 ---  
 
 Your data model has started to stabilize and you're in a position to create a public API for your web app. You realize it's hard to make significant changes to your API once it's released and want to get as much right as possible up front. Now, the internet has no shortage on opinions on API design. But, since there's no one widely adopted standard that works in all cases, you're left with a bunch of choices: What formats should you accept? How should you authenticate? Should your API be versioned?  

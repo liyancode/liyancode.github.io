@@ -1,9 +1,9 @@
 ---  
 layout: post  
-title:  "Measuring and Optimizing Performance of Single-Page Applications (SPA) Using RUM"  
+title:  "[R]Measuring and Optimizing Performance of Single-Page Applications (SPA) Using RUM"  
 date:   2017-02-02 09:16:58  
 categories: performance  
-author: liyan  
+author: internet  
 ---  
 
 ### Introduction  
