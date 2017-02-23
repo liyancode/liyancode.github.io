@@ -9,7 +9,7 @@
 <div class="container">
     <div class="blog-header">
         <h1 class="blog-title-post-title ">{{ page.title }}</h1>
-        <p class="lead blog-description" style="font-size: 16px;text-align: right;">Last update {{ page.date|date: "%b %-d, %Y" }} by {{ page.author }}</p>
+        <p class="lead blog-description" style="font-size: 16px;text-align: right;"><kw style="font-weight: bold;">{{ page.categories }}</kw> | last update {{ page.date|date: "%b %-d, %Y" }} from <at style="font-weight: bold; border-bottom: 1px solid;">{{ page.author }}</at></p>
     </div>
     <div class="row">
         <div class="col-sm-12 col-md-12 blog-main">

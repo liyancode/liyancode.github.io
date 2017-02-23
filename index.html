@@ -6,7 +6,7 @@ layout: default
     <h2 class="blog-post-title">
         <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
     </h2>
-    <p class="blog-post-meta">Last update {{ post.date|date: "%b %-d, %Y" }} by {{ post.author }}</p>
+    <p class="blog-post-meta"><kw style="font-weight: bold;">{{ post.categories }}</kw> | last update {{ post.date|date: "%b %-d, %Y" }} from <at style="font-weight: bold; border-bottom: 1px solid;">{{ post.author }}</p>
     <!--{{ post.content | strip_html | truncatewords: 50 }}-->
     {{ post.content }}
     <!--<div class="container">-->
