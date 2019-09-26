@@ -1,47 +1,47 @@
 ---
 layout: default
 ---
-{% for post in site.posts %}
-<div class="blog-post">
-    <h2 class="blog-post-title">
-        <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-    </h2>
-    <p class="blog-post-meta"><kw style="font-weight: bold;">{{ post.categories }}</kw> | last update {{ post.date|date: "%b %-d, %Y" }} from <at style="font-weight: bold; border-bottom: 1px solid;">{{ post.author }}</p>
-    <!--{{ post.content | strip_html | truncatewords: 50 }}-->
-    {{ post.content }}
-    <!--<div class="container">-->
-        <!--<div class="row myrowhight">-->
-            <!--<div class="col-xs-12 col-sm-9">-->
-                <!--<h2 class="blog-post-title">-->
-                    <!--<a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>-->
-                <!--</h2>-->
-            <!--</div>-->
-            <!--<div class="col-xs-12 col-sm-3 text-right">-->
-                <!--&lt;!&ndash;<p class="blog-post-meta">{{ post.date|date: "%b %-d, %Y" }} by <a href="#">{{ post.author }}</a></p>&ndash;&gt;-->
-                <!--<p class="blog-post-meta">{{ post.date|date: "%b %-d, %Y" }}</p>-->
-            <!--</div>-->
-            <!--<div class="col-xs-12 col-sm-4">-->
-                <!--<a href="{{ post.url | prepend: site.baseurl }}"><img src="{{ post.image }}" ></a>-->
-            <!--</div>-->
-            <!--<div class="col-xs-12 col-sm-8">-->
+<!--{% for post in site.posts %}-->
+<!--<div class="blog-post">-->
+    <!--<h2 class="blog-post-title">-->
+        <!--<a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>-->
+    <!--</h2>-->
+    <!--<p class="blog-post-meta"><kw style="font-weight: bold;">{{ post.categories }}</kw> | last update {{ post.date|date: "%b %-d, %Y" }} from <at style="font-weight: bold; border-bottom: 1px solid;">{{ post.author }}</p>-->
+    <!--&lt;!&ndash;{{ post.content | strip_html | truncatewords: 50 }}&ndash;&gt;-->
+    <!--{{ post.content }}-->
+    <!--&lt;!&ndash;<div class="container">&ndash;&gt;-->
+        <!--&lt;!&ndash;<div class="row myrowhight">&ndash;&gt;-->
+            <!--&lt;!&ndash;<div class="col-xs-12 col-sm-9">&ndash;&gt;-->
                 <!--&lt;!&ndash;<h2 class="blog-post-title">&ndash;&gt;-->
                     <!--&lt;!&ndash;<a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>&ndash;&gt;-->
                 <!--&lt;!&ndash;</h2>&ndash;&gt;-->
-                <!--&lt;!&ndash;<p class="blog-post-meta">{{ post.date|date: "%b %-d, %Y" }} by <a href="#">{{ post.author }}</a></p>&ndash;&gt;-->
-                <!--&lt;!&ndash;{{ post.content }}&ndash;&gt;-->
-                <!--&lt;!&ndash;{{ post.excerpt }}&ndash;&gt;-->
-                <!--{{ post.content | strip_html | truncatewords: 50 }}-->
-                <!--<a href="{{ post.url | prepend: site.baseurl }}">...Read more</a>-->
-                <!--&lt;!&ndash;{% if post.content contains site.excerpt_separator %}&ndash;&gt;-->
+            <!--&lt;!&ndash;</div>&ndash;&gt;-->
+            <!--&lt;!&ndash;<div class="col-xs-12 col-sm-3 text-right">&ndash;&gt;-->
+                <!--&lt;!&ndash;&lt;!&ndash;<p class="blog-post-meta">{{ post.date|date: "%b %-d, %Y" }} by <a href="#">{{ post.author }}</a></p>&ndash;&gt;&ndash;&gt;-->
+                <!--&lt;!&ndash;<p class="blog-post-meta">{{ post.date|date: "%b %-d, %Y" }}</p>&ndash;&gt;-->
+            <!--&lt;!&ndash;</div>&ndash;&gt;-->
+            <!--&lt;!&ndash;<div class="col-xs-12 col-sm-4">&ndash;&gt;-->
+                <!--&lt;!&ndash;<a href="{{ post.url | prepend: site.baseurl }}"><img src="{{ post.image }}" ></a>&ndash;&gt;-->
+            <!--&lt;!&ndash;</div>&ndash;&gt;-->
+            <!--&lt;!&ndash;<div class="col-xs-12 col-sm-8">&ndash;&gt;-->
+                <!--&lt;!&ndash;&lt;!&ndash;<h2 class="blog-post-title">&ndash;&gt;&ndash;&gt;-->
+                    <!--&lt;!&ndash;&lt;!&ndash;<a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>&ndash;&gt;&ndash;&gt;-->
+                <!--&lt;!&ndash;&lt;!&ndash;</h2>&ndash;&gt;&ndash;&gt;-->
+                <!--&lt;!&ndash;&lt;!&ndash;<p class="blog-post-meta">{{ post.date|date: "%b %-d, %Y" }} by <a href="#">{{ post.author }}</a></p>&ndash;&gt;&ndash;&gt;-->
+                <!--&lt;!&ndash;&lt;!&ndash;{{ post.content }}&ndash;&gt;&ndash;&gt;-->
+                <!--&lt;!&ndash;&lt;!&ndash;{{ post.excerpt }}&ndash;&gt;&ndash;&gt;-->
+                <!--&lt;!&ndash;{{ post.content | strip_html | truncatewords: 50 }}&ndash;&gt;-->
                 <!--&lt;!&ndash;<a href="{{ post.url | prepend: site.baseurl }}">...Read more</a>&ndash;&gt;-->
-                <!--&lt;!&ndash;{% endif %}&ndash;&gt;-->
-            <!--</div>-->
-        <!--</div>-->
-    <!--</div>-->
-</div>
-{% endfor %}
-<!--<div class="blog-post">-->
-    <!--<h2 class="blog-post-title">Sample blog post</h2>-->
+                <!--&lt;!&ndash;&lt;!&ndash;{% if post.content contains site.excerpt_separator %}&ndash;&gt;&ndash;&gt;-->
+                <!--&lt;!&ndash;&lt;!&ndash;<a href="{{ post.url | prepend: site.baseurl }}">...Read more</a>&ndash;&gt;&ndash;&gt;-->
+                <!--&lt;!&ndash;&lt;!&ndash;{% endif %}&ndash;&gt;&ndash;&gt;-->
+            <!--&lt;!&ndash;</div>&ndash;&gt;-->
+        <!--&lt;!&ndash;</div>&ndash;&gt;-->
+    <!--&lt;!&ndash;</div>&ndash;&gt;-->
+<!--</div>-->
+<!--{% endfor %}-->
+<div class="blog-post">
+    <h2 class="blog-post-title">建设中...</h2>
     <!--<p class="blog-post-meta">January 1, 2014 by <a href="#">Mark</a></p>-->
 
     <!--<p>This blog post shows a few different types of content that's supported and styled with Bootstrap. Basic typography, images, and code are all supported.</p>-->
@@ -71,4 +71,5 @@ layout: default
         <!--<li>Maecenas sed diam eget risus varius blandit sit amet non magna.</li>-->
     <!--</ol>-->
     <!--<p>Cras mattis consectetur purus sit amet fermentum. Sed posuere consectetur est at lobortis.</p>-->
-<!--</div>-->
+    <p>我是 立夏，期待你的访问 ：）</p>
+</div>
