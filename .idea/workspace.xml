@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5738c045-1080-4a19-860d-2e8d2f3f2e5d" name="Default" comment="update layout">
-      <change beforePath="$PROJECT_DIR$/Another-page.md" beforeDir="false" afterPath="$PROJECT_DIR$/Another-page.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_sass/custom/custom.scss" beforeDir="false" afterPath="$PROJECT_DIR$/_sass/custom/custom.scss" afterDir="false" />
     </list>
     <ignored path="liyancode.github.io.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -39,16 +39,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="custom.scss" pinned="false" current-in-tab="false">
+      <file leaf-file-name="custom.scss" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/_sass/custom/custom.scss">
-          <provider selected="true" editor-type-id="text-editor" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="236">
+              <caret line="60" column="24" lean-forward="true" selection-start-line="60" selection-start-column="24" selection-end-line="60" selection-end-column="24" />
+            </state>
+          </provider>
         </entry>
       </file>
-      <file leaf-file-name="Another-page.md" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Another-page.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Another-page.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="387">
+              <first_editor relative-caret-position="867">
                 <caret line="51" column="3" selection-start-line="51" selection-start-column="3" selection-end-line="51" selection-end-column="3" />
               </first_editor>
               <second_editor />
@@ -137,6 +141,7 @@
         <option value="$PROJECT_DIR$/test-child.md" />
         <option value="$PROJECT_DIR$/test-grand-child.md" />
         <option value="$PROJECT_DIR$/Another-page.md" />
+        <option value="$PROJECT_DIR$/_sass/custom/custom.scss" />
       </list>
     </option>
   </component>
@@ -609,7 +614,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3718000" />
+    <option name="totallyTimeSpent" value="3821000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -919,9 +924,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_sass/custom/custom.scss">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/CNAME">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -970,10 +972,17 @@
     <entry file="file://$PROJECT_DIR$/Another-page.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="387">
+          <first_editor relative-caret-position="867">
             <caret line="51" column="3" selection-start-line="51" selection-start-column="3" selection-end-line="51" selection-end-column="3" />
           </first_editor>
           <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_sass/custom/custom.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="236">
+          <caret line="60" column="24" lean-forward="true" selection-start-line="60" selection-start-column="24" selection-end-line="60" selection-end-column="24" />
         </state>
       </provider>
     </entry>
