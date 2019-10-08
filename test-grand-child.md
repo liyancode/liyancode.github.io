@@ -1,8 +1,8 @@
 ---
-title: Granchild of Test
-parent: Child of Test
-grand_parent: Test
+title: test_page_child_d
+parent: test_page_child
+grand_parent: test_page
 nav_order: 1
 ---
 
-# I am a grand child of test
+# 是例子页面的子页面

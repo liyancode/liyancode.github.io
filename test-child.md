@@ -1,10 +1,11 @@
 ---
-title: Child of Test
-parent: Test
+title: test_page_child
+parent: test_page
 has_children: true
 nav_order: 1
 ---
 
-# Child of test
+# 示例子页面1
 
-I am a child page.
+内容在这里
+。。。
