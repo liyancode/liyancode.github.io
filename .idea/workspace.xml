@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5738c045-1080-4a19-860d-2e8d2f3f2e5d" name="Default" comment="update layout">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/_config.yml" afterDir="false" />
     </list>
     <ignored path="liyancode.github.io.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -24,8 +24,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="414">
-              <caret line="74" column="6" lean-forward="true" selection-start-line="73" selection-start-column="3" selection-end-line="74" selection-end-column="6" />
+            <state relative-caret-position="296">
+              <caret line="43" column="47" lean-forward="true" selection-start-line="43" selection-start-column="47" selection-end-line="43" selection-end-column="47" />
             </state>
           </provider>
         </entry>
@@ -51,8 +51,17 @@
       <file leaf-file-name="_config.yml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/_config.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="12" lean-forward="true" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="12" />
+            <state relative-caret-position="51">
+              <caret line="3" column="21" lean-forward="true" selection-start-line="3" selection-start-column="21" selection-end-line="3" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/posts/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="3" selection-start-column="3" selection-end-column="3" />
             </state>
           </provider>
         </entry>
@@ -75,11 +84,9 @@
         <option value="$PROJECT_DIR$/_posts/2016-02-25-Java-Performance-2st.md" />
         <option value="$PROJECT_DIR$/_posts/2016-05-09-How-to-coding.md" />
         <option value="$PROJECT_DIR$/css/dataurl.css" />
-        <option value="$PROJECT_DIR$/_config.yml" />
         <option value="$PROJECT_DIR$/_posts/2016-12-01-说说“罗一笑事件”.md" />
         <option value="$PROJECT_DIR$/_posts/2016-04-21-Ruby-Bundler.md" />
         <option value="$PROJECT_DIR$/_posts/2016-02-24-Java-Performance-1st.md" />
-        <option value="$PROJECT_DIR$/posts/index.html" />
         <option value="$PROJECT_DIR$/css/blog.css" />
         <option value="$PROJECT_DIR$/about/index.html" />
         <option value="$PROJECT_DIR$/_posts/2017-02-02-Measuring and Optimizing Performance of Single-Page Applications (SPA) Using RUM.md" />
@@ -90,9 +97,11 @@
         <option value="$PROJECT_DIR$/_includes/sidebar.html" />
         <option value="$PROJECT_DIR$/_includes/header.html" />
         <option value="$PROJECT_DIR$/_layouts/default.html" />
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/_includes/footer.html" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/posts/index.html" />
+        <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/_config.yml" />
       </list>
     </option>
   </component>
@@ -559,7 +568,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2601000" />
+    <option name="totallyTimeSpent" value="3012000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -572,6 +581,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2617896" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32891566" />
@@ -839,13 +849,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/posts/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="12" selection-start-line="1" selection-start-column="12" selection-end-line="1" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/_includes/head.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-24">
@@ -895,17 +898,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/posts/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="3" selection-start-column="3" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="74" column="6" lean-forward="true" selection-start-line="73" selection-start-column="3" selection-end-line="74" selection-end-column="6" />
+        <state relative-caret-position="296">
+          <caret line="43" column="47" lean-forward="true" selection-start-line="43" selection-start-column="47" selection-end-line="43" selection-end-column="47" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/_config.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="12" lean-forward="true" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="12" />
+        <state relative-caret-position="51">
+          <caret line="3" column="21" lean-forward="true" selection-start-line="3" selection-start-column="21" selection-end-line="3" selection-end-column="21" />
         </state>
       </provider>
     </entry>
