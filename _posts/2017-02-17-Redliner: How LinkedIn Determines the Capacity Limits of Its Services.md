@@ -2,11 +2,12 @@
 layout: post  
 title:  "[R]Redliner: How LinkedIn Determines the Capacity Limits of Its Services"  
 date:   2017-02-17 22:16:58  
-categories: performance,capacity  
+category: performance  
+tags: [performance, 他山之石]  
 author: internet  
 ---  
 
-LinkedIn serves more than 467 million members on a global computing infrastructure through hundreds of internal services. During processes such as new feature releases, capacity planning for traffic growth, and data center failover analysis, the following questions are raised frequently:
+LinkedIn serves more than 467 million members on a global computing infrastructure through hundreds of internal services. During processes such as new feature releases, capacity planning for traffic growth, and data center failover analysis, the following questions are raised frequently:  
 
 - “What is the maximum QPS (queries per second) that my service can sustain with its current setup?”  
 - “Can the current number of servers handle 50% more traffic volume than the current level of peak traffic?”  

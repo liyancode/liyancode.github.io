@@ -2,12 +2,12 @@
 layout: page
 ---
 <div class="blog-main">
-    <h4>All Posts</h4>
+    <h4>所有文章{{page.url}}</h4>
     <ul class="posts-list">
         {% for post in site.posts %}
         <li class="list-unstyled">
             <a href="{{ post.url | prepend: site.baseurl }}" class="li-chevon">{{ post.title }}</a>
-            {{ post.date | date: "%b %-d, %Y" }}
+            关键字: {{ post.keywords }} 分类: {{ post.categories }} {{ post.date | date: "%b %-d, %Y" }}
         </li>
         {% endfor %}
     </ul>

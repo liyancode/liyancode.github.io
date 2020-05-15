@@ -2,7 +2,8 @@
 layout: post
 title:  "Java Performance: The Definitive Guide(1st)"
 date:   2015-02-24 12:16:58
-categories: performance java
+category: java  
+tags: [java,performance,book]  
 author: liyan  
 image: image/larg.png  
 ---

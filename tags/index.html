@@ -1,0 +1,63 @@
+---
+layout: page
+title: 标签
+---
+{% comment%}
+Here we generate all the tags.
+{% endcomment%}
+
+{% assign rawtags = "" %}
+{% for post in site.posts %}
+{% assign ttags = post.tags | join:'|' | append:'|' %}
+{% assign rawtags = rawtags | append:ttags %}
+{% endfor %}
+
+{% assign rawtags = rawtags | split:'|' | sort %}
+
+{% assign tags = "" %}
+
+{% for tag in rawtags %}
+{% if tag != "" %}
+
+{% if tags == "" %}
+{% assign tags = tag | split:'|' %}
+{% endif %}
+
+{% unless tags contains tag %}
+{% assign tags = tags | join:'|' | append:'|' | append:tag | split:'|' %}
+{% endunless %}
+{% endif %}
+{% endfor %}
+<div class="blog-main">
+    <br/>
+    <div>{{ page.title }}</div>
+    <br/>
+    <div class="posts">
+        <p>
+            {% for tag in tags %}
+            <a href="#{{ tag | slugify }}" class="label label-default"><span class="glyphicon glyphicon-tag"></span> {{ tag }} </a> &nbsp;&nbsp;
+            {% endfor %}
+
+            {% for tag in tags %}
+        <div class="cat-tag-head" id="{{ tag | slugify }}"><span class="glyphicon glyphicon-tag"></span>{{ tag }}</div>
+        <ul class="posts-list">
+            {% for post in site.posts %}
+            {% if post.tags contains tag %}
+            <li class="list-unstyled">
+                <div class="cat-tag-link">
+                    <a href="{{ post.url }}" class="li-chevon">
+                        <span class="glyphicon glyphicon-chevron-right"></span>
+                        {{ post.title }}
+                    </a>
+                    &nbsp;&nbsp;
+                    <span class="glyphicon glyphicon-calendar"></span>
+                    <small>{{ post.date | date_to_string }}</small>
+                    <a href="/categories/#{{ post.category | slugify }}"><span class="glyphicon glyphicon-folder-close"></span>&nbsp;&nbsp;{{ post.category }}</a>
+                </div>
+            </li>
+            {% endif %}
+            {% endfor %}
+        </ul>
+        {% endfor %}
+    </div>
+</div>

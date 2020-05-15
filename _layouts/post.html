@@ -8,8 +8,13 @@
 
 <div class="container">
     <div class="blog-header">
-        <h1 class="blog-title-post-title ">{{ page.title }}</h1>
-        <p class="lead blog-description" style="font-size: 16px;text-align: right;"><kw style="font-weight: bold;">{{ page.categories }}</kw> | last update {{ page.date|date: "%b %-d, %Y" }} from <at style="font-weight: bold; border-bottom: 1px solid;">{{ page.author }}</at></p>
+        <h1 class="blog-title-post-title">{{ page.title }}</h1>
+        <p class="blog-post-meta">{{ page.author }} 发表于 {{ page.date|date: "%b %-d, %Y" }}
+            {% for tag in page.tags %}
+            <a href="/tags#{{tag}}" class="label label-default">{{tag}}</a>
+            {% endfor %}
+            <span class="glyphicon glyphicon-folder-close" aria-hidden="true"></span> <a href="/categories#{{ page.category }}">{{ page.category }}</a>
+        </p>
     </div>
     <div class="row">
         <div class="col-sm-12 col-md-12 blog-main">

@@ -9,6 +9,7 @@ description: > # this means to ignore newlines until "baseurl:"
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://liyancode.github.io" # the base hostname & protocol for your site
 github_username:  liyancode
+excerpt_separator: "<!--readmore-->"
 
 # Build settings
 markdown: kramdown

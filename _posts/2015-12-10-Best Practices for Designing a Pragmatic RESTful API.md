@@ -2,7 +2,8 @@
 layout: post  
 title:  "[R]Best Practices for Designing a Pragmatic RESTful API"  
 date:   2015-12-10 01:16:58  
-categories: REST  
+category: performance  
+tags: [api,design,restful]  
 author: internet  
 ---  
 

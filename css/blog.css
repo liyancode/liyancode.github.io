@@ -2,23 +2,23 @@
  * Globals
  */
 
-html {
-    font-family: PingFang SC,Lantinghei SC,Helvetica Neue,Helvetica,Arial,Microsoft YaHei,\\5FAE\8F6F\96C5\9ED1,STHeitiSC-Light,simsun,\\5B8B\4F53,WenQuanYi Zen Hei,WenQuanYi Micro Hei,'sans-serif';
-    /*-moz-osx-font-smoothing: grayscale;*/
-    -webkit-font-smoothing: antialiased;
-}
+/*html {*/
+    /*font-family: PingFang SC,Lantinghei SC,Helvetica Neue,Helvetica,Arial,Microsoft YaHei,\\5FAE\8F6F\96C5\9ED1,STHeitiSC-Light,simsun,\\5B8B\4F53,WenQuanYi Zen Hei,WenQuanYi Micro Hei,'sans-serif';*/
+    /*!*-moz-osx-font-smoothing: grayscale;*!*/
+    /*-webkit-font-smoothing: antialiased;*/
+/*}*/
 
-h1, .h1,
-h2, .h2,
-h3, .h3,
-h4, .h4,
-h5, .h5,
-h6, .h6 {
-    margin-top: 0;
-    /*font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;*/
-    font-weight: normal;
-    color: #333;
-}
+/*h1, .h1,*/
+/*h2, .h2,*/
+/*h3, .h3,*/
+/*h4, .h4,*/
+/*h5, .h5,*/
+/*h6, .h6 {*/
+    /*margin-top: 0;*/
+    /*!*font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;*!*/
+    /*font-weight: normal;*/
+    /*color: #333;*/
+/*}*/
 
 
 /*
@@ -52,7 +52,8 @@ a:focus, a:hover {
 .blog-nav-item {
     position: relative;
     display: inline-block;
-    padding: 24px;
+    padding: 24px 24px 24px 0px;
+    margin-right: 24px;
     font-weight: 500;
     color: #212121;
     color: rgba(0,0,0,.87);
@@ -114,7 +115,7 @@ a:focus, a:hover {
     line-height: 1.5;
 }
 .blog-main a{
-    color: #4184F3;
+    /*color: #4184F3;*/
     /*color: rgba(0,0,0,.87);*/
 }
 
@@ -170,31 +171,34 @@ a:focus, a:hover {
     padding-left: 8%;
 }
 .blog-post-title {
-    color: #212121;
-    color: rgba(0,0,0,.87);
-    margin-bottom: 20px;
-    font-size: 24px;
-    line-height: 26px;
+    /*color: #212121;*/
+    /*color: rgba(0,0,0,.87);*/
+    /*margin-bottom: 20px;*/
+    font-size: 22px;
+    line-height: 24px;
 }
-.blog-post-title>a{
-    color: #212121;
-    color: rgba(0,0,0,.87);
-}
+/*.blog-post-title>a{*/
+    /*color: #212121;*/
+    /*color: rgba(0,0,0,.87);*/
+/*}*/
 .blog-post-title>a:focus, a:hover{
     color: #4184F3;
     text-decoration: none;
 }
 .blog-post-meta {
     margin-bottom: 8px;
-    color: #999;
+    /*color: #999;*/
+    font-weight: 300;
+    font-size: 14px;
+    /*color: #7ac96f;*/
 }
 
 .blog-title-post-title{
     margin-top: 20px;
     margin-bottom: 0;
-    font-size: 20px;
+    font-size: 22px;
     font-weight: normal;
-    line-height: 34px;
+    line-height: 36px;
 }
 
 /*
@@ -227,11 +231,13 @@ a:focus, a:hover {
     height: 256px;
 }
 
-.li-chevon{
-    background: url(../image/li-chevron.png) 0 5px no-repeat;
-    padding: 5px 15px 5px 25px;
-    background-position: 15px 10px;
-}
 .posts-list{
     padding-left: 0px;
+}
+
+.list-unstyled{
+    margin-top: 6px;
+}
+.cat-tag-head{
+    margin-top: 24px;
 }
