@@ -2,16 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5738c045-1080-4a19-860d-2e8d2f3f2e5d" name="Default" comment="update layout">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/_config.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_layouts/post.html" beforeDir="false" afterPath="$PROJECT_DIR$/_layouts/post.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/2014-07-21-Ruby-Bundler.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2014-07-21-Ruby-Bundler.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/2015-02-24-Java-Performance-1st.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2015-02-24-Java-Performance-1st.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/2015-12-10-Best Practices for Designing a Pragmatic RESTful API.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2015-12-10-Best Practices for Designing a Pragmatic RESTful API.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/2016-12-01-说说“罗一笑事件”.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2016-12-01-说说“罗一笑事件”.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/2017-02-02-Measuring and Optimizing Performance of Single-Page Applications (SPA) Using RUM.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2017-02-02-Measuring and Optimizing Performance of Single-Page Applications (SPA) Using RUM.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/2017-02-17-Redliner: How LinkedIn Determines the Capacity Limits of Its Services.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2017-02-17-Redliner: How LinkedIn Determines the Capacity Limits of Its Services.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_includes/sidebar.html" beforeDir="false" afterPath="$PROJECT_DIR$/_includes/sidebar.html" afterDir="false" />
     </list>
     <ignored path="liyancode.github.io.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -34,7 +25,20 @@
         <entry file="file://$PROJECT_DIR$/_config.yml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="289">
-              <caret line="17" column="32" selection-start-line="17" selection-start-column="20" selection-end-line="17" selection-end-column="32" />
+              <caret line="17" column="17" selection-start-line="17" selection-end-line="17" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="sidebar.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/_includes/sidebar.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="166">
+              <caret line="57" column="4" selection-start-line="57" selection-start-column="4" selection-end-line="57" selection-end-column="4" />
+              <folding>
+                <element signature="e#1265#1305#0" expanded="true" />
+                <element signature="e#2616#2650#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -51,7 +55,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="post.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="post.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/_layouts/post.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="312">
@@ -132,13 +136,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_layout.scss" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/_sass/_layout.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1465" />
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
@@ -182,7 +179,6 @@
         <option value="$PROJECT_DIR$/_includes/footer.html" />
         <option value="$PROJECT_DIR$/about/index.html" />
         <option value="$PROJECT_DIR$/css/blog.css" />
-        <option value="$PROJECT_DIR$/_includes/sidebar.html" />
         <option value="$PROJECT_DIR$/_layouts/default.html" />
         <option value="$PROJECT_DIR$/tags/index.html" />
         <option value="$PROJECT_DIR$/categories/index.html" />
@@ -195,6 +191,7 @@
         <option value="$PROJECT_DIR$/_posts/2017-02-02-Measuring and Optimizing Performance of Single-Page Applications (SPA) Using RUM.md" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/_layouts/post.html" />
+        <option value="$PROJECT_DIR$/_includes/sidebar.html" />
       </list>
     </option>
   </component>
@@ -226,7 +223,7 @@
             <path>
               <item name="liyancode.github.io" type="b2602c69:ProjectViewProjectNode" />
               <item name="liyancode.io" type="462c0819:PsiDirectoryNode" />
-              <item name="_layouts" type="462c0819:PsiDirectoryNode" />
+              <item name="_includes" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="liyancode.github.io" type="b2602c69:ProjectViewProjectNode" />
@@ -678,7 +675,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="18387000" />
+    <option name="totallyTimeSpent" value="19285000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -933,13 +930,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_includes/sidebar.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="235">
-          <caret line="56" column="33" selection-start-line="56" selection-start-column="33" selection-end-line="56" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/_includes/header.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="278">
@@ -985,13 +975,6 @@
     <entry file="file://$PROJECT_DIR$/_sass/_layout.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1465" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_config.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="32" selection-start-line="17" selection-start-column="20" selection-end-line="17" selection-end-column="32" />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/_posts/2014-07-21-Ruby-Bundler.md">
@@ -1084,6 +1067,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/_layouts/post.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="312">
+          <caret line="27" column="18" lean-forward="true" selection-start-line="27" selection-start-column="18" selection-end-line="27" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
@@ -1094,10 +1084,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_layouts/post.html">
+    <entry file="file://$PROJECT_DIR$/_config.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="27" column="18" lean-forward="true" selection-start-line="27" selection-start-column="18" selection-end-line="27" selection-end-column="18" />
+        <state relative-caret-position="289">
+          <caret line="17" column="17" selection-start-line="17" selection-end-line="17" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_includes/sidebar.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="166">
+          <caret line="57" column="4" selection-start-line="57" selection-start-column="4" selection-end-line="57" selection-end-column="4" />
+          <folding>
+            <element signature="e#1265#1305#0" expanded="true" />
+            <element signature="e#2616#2650#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
