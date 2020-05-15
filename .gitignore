@@ -1,4 +1,4 @@
 _site
 .sass-cache
 _drafts
-.idea
+.idea/*
