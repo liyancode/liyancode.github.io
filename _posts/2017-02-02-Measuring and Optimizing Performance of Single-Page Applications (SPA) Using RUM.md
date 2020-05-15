@@ -14,7 +14,7 @@ Improving site speed is one of the major technology initiatives at LinkedIn beca
 Page Load Time (PLT) is the key metric that we measure for every page at LinkedIn in order to capture the user’s perception of when the page is ready. It is not easy to measure this metric uniformly across all pages because it is highly subjective depending on the content of the page and on the end user’s perception. [Speed Index](https://sites.google.com/a/webpagetest.org/docs/using-webpagetest/metrics/speed-index) is a good indicator for the user’s perception of when the page is rendered, and we use it for measuring performance in synthetic environments. But it is not possible to calculate this metric [accurately](https://github.com/WPO-Foundation/RUM-SpeedIndex) using RUM. So, we needed to find a good proxy for PLT that could be easily measured using RUM. For traditional web applications, which are mostly server-side rendered, window.onload() event is a reasonably good proxy for PLT. Most traditional RUM libraries use the [Navigation Timing API](https://www.w3.org/TR/navigation-timing/) to detect when window.onload() event is fired and thereby measure PLT for the page. However, as we discuss below, we ran into several obstacles when trying to use window.onload() as a proxy for PLT for single-page applications.  
   
   
-  
+<!--break--> 
 ### Single-page applications  
 
 Single-page applications (SPA) are web applications built using a Javascript MVC framework, like [Ember](https://engineering.linkedin.com/blog/2016/12/pemberly-at-linkedin), to deliver a rich, app-like experience. The HTML for these pages is mostly built on the client browser instead of the web server. Another thing to note is that any page/URL in these applications can be visited in two modes:  

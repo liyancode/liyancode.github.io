@@ -40,7 +40,7 @@ In designing an API for Enchant (a Zendesk Alternative), I've tried to come up w
 ### Key requirements for the API  
 
 Many of the API design opinions found on the web are academic discussions revolving around subjective interpretations of fuzzy standards as opposed to what makes sense in the real world. My goal with this post is to describe best practices for a pragmatic API designed for today's web applications. I make no attempt to satisfy a standard if it doesn't feel right. To help guide the decision making process, I've written down some requirements that the API must strive for:  
-
+<!--break-->
 - It should use web standards where they make sense  
 - It should be friendly to the developer and be explorable via a browser address bar  
 - It should be simple, intuitive and consistent to make adoption not only easy but pleasant  

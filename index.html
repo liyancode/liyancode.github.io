@@ -12,7 +12,12 @@ layout: default
         {% endfor %}
         <span class="glyphicon glyphicon-folder-close" aria-hidden="true"></span> <a href="/categories#{{ post.category }}">{{ post.category }}</a>
     </p>
-    {{ post.excerpt}}
-    <a style="color: #4184F3" href="{{ post.url | prepend: site.baseurl }}">...read more</a>
+    {{ post.excerpt }}
+    <!-- Whether or not to display the "read more" button -->
+    {% capture content_words %}{{ post.content | number_of_words }}{% endcapture %}
+    {% capture excerpt_words %}{{ post.excerpt | number_of_words }}{% endcapture %}
+    {% if excerpt_words != content_words %}
+    <a href="{{ post.url }}" style="color: #4184F3">...Read More</a>
+    {% endif %}
 </div>
 {% endfor %}

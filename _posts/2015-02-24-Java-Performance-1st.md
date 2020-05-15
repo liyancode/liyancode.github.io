@@ -26,7 +26,7 @@ image: image/larg.png
 ---
 
 ## 1章
-
+<!--break-->
 ### 性能story
 
 - #### 算法尽可能高效

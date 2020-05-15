@@ -23,7 +23,7 @@ Bundler使用起来非常简单。
 ```
 $ gem install bundler
 ```  
-
+<!--break-->
 **第二步：在Ruby项目的根目录下新建文件 _Gemfile_（[详细](#gemfile)）**  
 文件内容像下面这样：  
 > **source 'https://rubygems.org'  \# gem源地址  

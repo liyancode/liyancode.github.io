@@ -14,7 +14,7 @@ LinkedIn serves more than 467 million members on a global computing infrastructu
 - “What infrastructure elements are the potential capacity bottlenecks for my service?”  
 
 As LinkedIn's performance team, it’s our job to provide accurate answers to these questions in a timely fashion.  
-
+<!--break-->
 However, due to the nature of rapid-growing web services like LinkedIn, we face big challenges when trying to measure service capacity limits. These challenges come from the constantly changing traffic shape, the heterogeneous infrastructure characteristics, and the evolving bottlenecks. In order to determine service capacity limits accurately and pinpoint capacity bottlenecks effectively, we need a solution that:  
 
 - Leverages the production environment to overcome lab limitations;  
